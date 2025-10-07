@@ -1,1 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<style>
+    body{
+        font-family: Helvetica, sans-serif;
+        background-color: #f4f4f4;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
 
+    h1{
+        text-align: center;
+        color: #000000;
+        font-weight: bold;
+    }
+
+    h2{
+        text-align: center;
+        color: #333333;
+    }
+    form{
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 25px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label{
+        margin-bottom: 8px;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    .boton{
+        background-color: #b4b4b4;
+        color: white;
+        padding: 8.5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .boton:hover{
+        background-color: #333333;
+    } 
+</style>
+<body>
+
+    <h1>Tipos de inputs</h1>
+
+    <form action="formulario.html" method="get">
+        <h2>Registro</h2>
+        <label for="nombre">
+            Nombre del usuario:
+        </label>
+            <br>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+           
+        <br>
+        <label for="Apellidos">
+            Apellidos
+        </label>
+            <br>
+        <input type="text" id="Apellidos" name="Apellidos" placeholder="Escribe tus apellidos">
+           
+        <br>
+        <label for="Matricula">
+            Matricula
+        </label>
+            <br>
+        <input type="text" id="Matricula" name="Matricula">
+           
+        <br>
+        <label for="Direccion">
+            Calle y número
+        </label>
+            <br>
+        <input type="text" id="Direccion" name="Direccion">
+        <br>
+        <label for="email">
+            Correo electronico
+        </label> <br>
+        <input type="email" id="email" name="email">
+        
+        <br>
+        <label for="contraseña">
+            Ingresa tu contraseña
+        </label> <br>
+        <input type="password" id="contraseña" name="contraseña">
+        
+        <br> <br>
+        
+        <input type="submit" value="Enviar datos" class="boton" onclick="alert('Datos enviados con exito'); return false;">
+       
+        <br> <br>  <br>
+
+        <label for="text">
+            Tipo texto
+        </label>
+        <input type="text">
+        
+        <br>
+         <label for="busqueda">
+            Buscar
+        </label>
+        <input type="search" id="busqueda" name="busqueda">
+        
+        <br>
+        
+        <label for="URL">
+            URL
+        </label>
+        <input type="url" name="URL" id="URL">
+        
+        <br>
+        <label for="campodetexto">
+            busquedas
+        </label>
+        
+        <br>
+        <textarea name="textarea" id="campodetexto"></textarea>
+        
+        <br>
+        <br>
+        <label for="numeros">
+            Tipos númericos
+        </label>
+        <input type="number" class="numeros" name="numeros" id="numeros">
+       
+        <br>
+        <label for="rango">
+            Rango de edades
+        </label>
+        <input type="range" name="rango" id="rango"> Entre 17 y 30 años
+        <br>
+        <label for="Fecha">
+            Fecha
+        </label> <br>
+        <input type="date" name="Fecha" id="Fecha">
+        <br>
+
+        <label for="date">Elije el horario</label> <br>
+        <input type="time" name="" id="">
+        <br>
+
+        <label for="date">Tiempo y fecha de la cita</label> <br>
+        <input type="datetime-local" name="" id="">
+        <br>
+
+        <label for="date">Rango de fechas</label> <br>
+        <input type="month" name="" id="">
+        <br>
+
+        <label for="date">Semana del año</label> <br>
+        <input type="week" name="" id="">
+        <br>
+
+        <label for="color">Elige un sexo</label> <br>
+        <input type="radio" name="sexo" id="hombre" value="hombre"> Hombre
+        <input type="radio" name="sexo" id="mujer" value="mujer"> Mujer
+        <input type="radio" name="sexo" id="otro" value="otro"> Otro    
+        <br>
+        <br>
+
+        <input type="checkbox" name="Materias" id="Materias"> <br>
+        
+        <label for="Materias">Las materias</label><br>
+        <select name="" id=""> Valores unicos
+            <option value="1">IDAI</option>
+            <option value="2">Estadistica aplicada</option>
+            <option value="3">Contabilidad</option>
+        </select>
+<br>    
+<br>
+        <select multiple name="" id=""> Horario de clases
+            <option value="1">8:55-9:45</option>
+            <option value="2">9:50-10:35</option>
+            <option value="3">10:55-12:30</option>
+        </select>
+        <br> <br>
+        <input type="text" list="items">
+        <datalist id="items"> Carreras
+            <option value="1">Psicologia</option>
+            <option value="2">ING en software</option>
+            <option value="3">LIC. Contabilidad</option>
+        </datalist><br>
+        <br>
+        
+        <input type="submit" value="Enviar datos (2da parte)" class="boton" onclick="alert('Datos enviados con exito'); return false;">
+    </form>
+</body>
+</html>
